@@ -54,13 +54,14 @@ const Login = () =>{
 
 
     return (
-        <div className="container">
+        <>
+        <div className="columns mt-4 is-centered">
             <form onSubmit={handleSubmit}>
                 <div className="field">
                     <label className="label">Email</label>
                     <div className="control">
                         <input
-                            className="input"
+                            className="input mb-2"
                             type="text"
                             placeholder="email"
                             name="email"
@@ -68,8 +69,9 @@ const Login = () =>{
                             onChange={handleChange}
                         ></input>
                         {errors.email && (<p className="is-danger">{errors.email}</p>)}
+                        <label className="label">Password</label>
                         <input
-                            className="input"
+                            className="input mt-2"
                             type="password"
                             placeholder="password"
                             name="password"
@@ -85,6 +87,7 @@ const Login = () =>{
                 </div>
             </form>
         </div>
+        </>
     )
 }
 
